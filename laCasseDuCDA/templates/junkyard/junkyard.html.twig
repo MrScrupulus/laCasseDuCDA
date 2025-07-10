@@ -9,7 +9,11 @@
 {% for model in models %}
     <div class="col-md-4 d-flex justify-content-center mb-4">
         <div class="card" style="width: 18rem;">
-            <img src="{{model.brand.image}}" class="card-img-top" alt="Renault logo">
+        {% if model.brand.image starts with 'http'%}
+        <img src ="{{model.brand.image}}" class='card-img-top'alt='logo brand'>
+        {% else %}
+        <img src="{{ asset('images/brand/' ~ model.brand.image) }}" class="card-img-top" alt="{{ model.brand.name }}">
+        {% endif %}
             <div class="card-body">
                 <h2 class="card-title">{{model.brand.name}} {{model.name}}</h2>
                 <h5>{{model.brand.manufactureName}}, {{model.brand.countryOfManufacture}}</h5>
@@ -19,8 +23,11 @@
         </div>
     </div>
 {% endfor %}
+    
+
+<div class='d-flex justify-content-center mt-4'>
 {{ knp_pagination_render(models) }}
 </div>
-    
+</div>    
 {% endfor %}
 {% endblock %}

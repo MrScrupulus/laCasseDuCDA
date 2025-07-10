@@ -64,7 +64,7 @@ class Brand
     public function removeModel(Model $model): static
     {
         if ($this->model->removeElement($model)) {
-            // set the owning side to null (unless already changed)
+            
             if ($model->getBrand() === $this) {
                 $model->setBrand(null);
             }
@@ -120,4 +120,8 @@ class Brand
 
         return $this;
     }
+    public function __toString(): string
+{
+    return $this->name ?? '';
+}
 }
