@@ -1,0 +1,12 @@
+body {
+    background-color: chartreuse;
+    h1{
+        color: blueviolet;
+    }
+    i{
+        color: blueviolet;
+        font-size: 2em;
+        
+    }
+    
+}
