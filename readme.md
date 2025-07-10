@@ -1,16 +1,13 @@
-### commande de création projet full symfony 
+### FOAD - Boutique Jordan
 
-symfony new my_project_directory --version="7.3.x-dev" --webapp
 
-|-------------------------------------------------------------------|
-### commandes création de database
+lien github:
 
-php bin/console doctrine:database:create
 
-php bin/console make:entity
+- [lien http du repository symfony](https://github.com/MrScrupulus/symfony.git)
 
-php bin/console make:migration
+- [lien ssh du repository symfony]([git@github.com:MrScrupulus/symfony.git)
 
-php bin/console doctrine:migrations:migrate
 
-php bin/console make:controller ProductController
+
+
